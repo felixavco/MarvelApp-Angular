@@ -1,1 +1,13 @@
-<p>characters works!</p>
+<section class="Grid">
+  <div *ngIf="characters.length > 0; then CharactersCont else LoaderCont"></div>
+
+  <ng-template #LoaderCont>
+    <app-spinner></app-spinner>
+  </ng-template>
+
+  <ng-template #CharactersCont>
+    <div *ngFor="let character of characters">
+      <app-card [data]="character" [url]="'/characters'"></app-card>
+    </div>
+  </ng-template>
+</section>

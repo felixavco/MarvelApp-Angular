@@ -1,1 +1,9 @@
-@import './styles/bootstrap.min.scss';
+//Screen Sizes
+$landscape: 500px;
+$tablet: 750px;
+$medium: 1024px;
+$large: 1200px;
+$x-large: 1500px;
+
+@import './styles/bootstrap.min';
+@import './styles/grid';
